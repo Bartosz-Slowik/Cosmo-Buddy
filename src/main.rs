@@ -1,5 +1,5 @@
 //! Keychain buddy: a cat on the OLED that lives in your phone too. Over Bluetooth LE the phone
-//! page (docs/index.html; Chrome on Android, or the Bluefy browser on iPhone) shows a live copy of
+//! page (index.html; Chrome on Android, or the Bluefy browser on iPhone) shows a live copy of
 //! the screen you can rub to pet the cat, and switches between modes:
 //!   pet     the cat, with moods set from the phone
 //!   song    the Spotify song playing on the phone's account, and what's next

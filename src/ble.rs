@@ -7,7 +7,7 @@ use esp32_nimble::utilities::mutex::Mutex;
 use esp32_nimble::utilities::BleUuid;
 use esp32_nimble::{uuid128, BLEAdvertisementData, BLECharacteristic, BLEDevice, NimbleProperties};
 
-/// Must match the UUIDs in docs/index.html
+/// Must match the UUIDs in index.html
 const SERVICE: BleUuid = uuid128!("7b6b0001-3c1a-4c2e-9a8e-6d2f5b1c0a01");
 const COMMAND: BleUuid = uuid128!("7b6b0002-3c1a-4c2e-9a8e-6d2f5b1c0a01");
 const STATUS: BleUuid = uuid128!("7b6b0003-3c1a-4c2e-9a8e-6d2f5b1c0a01");
