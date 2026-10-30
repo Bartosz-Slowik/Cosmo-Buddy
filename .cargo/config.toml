@@ -1,0 +1,19 @@
+[build]
+target = "xtensa-esp32s3-espidf"
+# esp-idf-sys refuses build paths over 88 characters on Windows
+target-dir = "C:/esp/buddy"
+
+[target.xtensa-esp32s3-espidf]
+linker = "ldproxy"
+runner = "espflash flash --monitor"
+rustflags = ["--cfg", "espidf_time64"]
+
+[unstable]
+build-std = ["std", "panic_abort"]
+
+[env]
+MCU = "esp32s3"
+LIBCLANG_PATH = { value = "C:/Users/XTB847/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-clang/bin/libclang.dll", force = true }
+# The target dir is outside the project, so esp-idf-sys needs telling where Cargo.toml is
+CARGO_WORKSPACE_DIR = { value = ".", relative = true }
+ESP_IDF_TOOLS_INSTALL_DIR = "global"
